@@ -1,14 +1,12 @@
-# tests/test_fastapi.py
-
 from fastapi.testclient import TestClient
-from apiannegit import app  # Replace 'your_app_module_name' with the actual name of your Python file
+from apiannegit import app  # Replace 'apiannegit' with the actual name of your Python file if it's different
 
 client = TestClient(app)
 
 def test_index():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "Hello, stranger"}
+    assert response.json() == {"message": "Hello, stranger, from GitHub actions"}
 
 def test_get_name():
     response = client.get("/John")
