@@ -1,1 +1,1 @@
-gunicorn -w 4 -k uvicorn.workers.UvicornWorker apianne:app
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker fast:app
